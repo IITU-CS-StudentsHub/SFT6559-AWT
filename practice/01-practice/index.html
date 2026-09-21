@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice 1 | GitHub Repository Explorer</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Practice 1 | GitHub Explorer</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#search">Search</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="search">
+      <section class="search-section">
+        <form id="search-form" novalidate>
+          <label for="github-username">GitHub username:</label>
+          <div class="input-group">
+            <input
+              type="text"
+              id="github-username"
+              placeholder="e.g., octocat"
+              required
+            />
+            <button type="submit">Search</button>
+          </div>
+          <span id="validation-msg" class="error-text hidden"
+            >Please enter a GitHub username.</span
+          >
+        </form>
+      </section>
+
+      <section class="controls-section hidden" id="controls-section">
+        <div class="control-group">
+          <label for="language-filter">Filter by language:</label>
+          <select id="language-filter">
+            <option value="All">All</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label for="sort-select">Sort by:</label>
+          <select id="sort-select">
+            <option value="name-asc">Repository name (A-Z)</option>
+            <option value="name-desc">Repository name (Z-A)</option>
+            <option value="stars-desc">Stars (High to Low)</option>
+            <option value="stars-asc">Stars (Low to High)</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="status-section">
+        <div id="loading-msg" class="hidden">Loading repositories...</div>
+        <div id="error-msg" class="error-text hidden"></div>
+      </section>
+
+      <section id="repository-grid" class="repository-grid">
+        <!-- Repository cards will be injected here via JavaScript -->
+      </section>
+    </main>
+
+    <footer id="about">
+      <p>&copy; 2026 GitHub Repository Explorer. Practical Task 1.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
