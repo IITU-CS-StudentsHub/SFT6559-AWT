@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Course Catalog API",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

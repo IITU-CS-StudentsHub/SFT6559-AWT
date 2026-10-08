@@ -1,0 +1,19 @@
+meta {
+  name: List Courses
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:8000/courses?page=1&page_size=20&sort=popular
+  body: none
+  auth: none
+}
+
+params:query {
+  page: 1
+  page_size: 20
+  sort: popular
+  ~is_elective: true
+  ~q: search
+}
